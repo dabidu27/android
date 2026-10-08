@@ -13,6 +13,9 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG="MainActivity";
+    private int counter = 0;
+
+    private TextView tvCounter; //initialize an object of TextView, so we can change the text view's property in code
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +32,17 @@ public class MainActivity extends AppCompatActivity {
         //toasts - little pop-ups
         Toast.makeText(this, "DAM LAB", Toast.LENGTH_SHORT).show(); //Toast.makeText(context, string, duration)
         Toast.makeText(getApplicationContext(), getString(R.string.greeting), Toast.LENGTH_SHORT).show(); //getApplicationContext() = this in this context
+
+        tvCounter = findViewById(R.id.tvCounter); //find the tvCounter by it's id
+
+
+        Button btnIncrement = findViewById(R.id.btnIncrement);
+        btnIncrement.setOnClickListener(v -> {
+            counter++;
+            updateCounter();
+        })
     }
+
 
     @Override
     protected void onStart() {
