@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">s03</string>
+    <string name="header">Fav movies app</string>
+    <string name="open_web">Open WEB</string>
+    <string name="hint_title">Movie title</string>
+    <string name="hint_rating">Rating</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+</resources>
